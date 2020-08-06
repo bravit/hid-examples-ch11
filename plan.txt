@@ -1,0 +1,43 @@
+0. Haskell in depth: chapter 11
+
+ github.com/bravit/hid-examples-ch11
+
+
+1. Terms, types, kinds
+ ch11/intro.hs
+
+2. Phantom types and proxy types
+ ch11/temperatures/TempPhantom.hs
+ ch11/temperatures/UnitNameProxies.hs
+
+3. Type applications
+ ch11/vta-read.hs
+ ch11/temperatures/UnitNameTypeApps.hs
+
+4. Type operators
+ ch11/type-operators.hs
+
+5. Data kinds
+ ch11/temperatures/temp-kinds.hs
+
+6. Type-level literals
+ ch11/type-lits/Pointers.hs
+ ch11/type-lits/SuffixedStrings.hs
+
+7. Type synonym families
+ ch11/type-families/SimplifyWiden.hs
+
+8. Data families
+ ch11/type-families/XListable.hs
+
+9. Associated families
+ ch11/type-families/Graphs.hs (-)
+
+10. Generalised algebraic datatypes
+ ch11/dyn-simple.hs
+ ch11/dynvalues-gadt.hs
+
+11. Arbitrary-rank polymorphism
+ ch11/nummod-rank-n/process.hs
+ ch11/nummod-rank-n/NumUtils.hs
+ ch11/nummod-rank-n/Main.hs

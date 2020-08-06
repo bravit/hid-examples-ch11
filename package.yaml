@@ -1,0 +1,82 @@
+name: hid-examples-ch11
+version: 0.5.1
+synopsis: Exerpts from hid-examples
+description:
+        This package provides source code examples which accompany the book
+        "Haskell in Depth" by Vitaly Bragilevsky (Manning Publications 2020).
+        You may want to get this package via @cabal get hid-examples@
+        and explore its content.
+
+category:            Sample Code
+license:             BSD3
+author: Vitaly Bragilevsky
+maintainer: Vitaly Bragilevsky <vit.bragilevsky@gmail.com>
+github: bravit/hid-examples
+extra-source-files:
+    - stack.yaml
+    - package.yaml
+
+dependencies: base >=4.12 && <4.15
+
+executables:
+    # Chapter 11
+    temp-proxies:
+        source-dirs: ch11/temperature
+        main: temp-proxies.hs
+        other-modules: [TempPhantomNoShow, UnitNameProxies]
+        other-extensions:
+          - GeneralizedNewtypeDeriving
+          - ScopedTypeVariables
+          - PolyKinds
+          - InstanceSigs
+    temp-type-apps:
+        source-dirs: ch11/temperature
+        main: temp-type-apps.hs
+        other-modules: [TempPhantomNoShow, UnitNameTypeApps]
+        other-extensions:
+          - GeneralizedNewtypeDeriving
+          - ScopedTypeVariables
+          - PolyKinds
+          - AllowAmbiguousTypes
+          - TypeApplications
+    type-operators:
+        main: ch11/type-operators.hs
+        other-modules: []
+        other-extensions:
+          - TypeOperators
+          - NoStarIsType
+    temp-kinds:
+        source-dirs: ch11/temperature
+        main: temp-kinds.hs
+        other-modules: []
+        other-extensions:
+          - GeneralizedNewtypeDeriving
+          - ScopedTypeVariables
+          - PolyKinds
+          - AllowAmbiguousTypes
+          - TypeApplications
+    type-lits:
+        source-dirs: ch11/type-lits
+        main: Main.hs
+        other-modules: [Pointers, SuffixedStrings]
+        other-extensions:
+          - DataKinds
+          - KindSignatures
+          - ScopedTypeVariables
+    type-families:
+        source-dirs: ch11/type-families
+        main: Main.hs
+        other-extensions:
+          - TypeFamilies
+          - FlexibleInstances
+        dependencies:
+          - containers >= 0.5 && < 0.7
+    dynvalues-gadt:
+        main: ch11/dynvalues-gadt.hs
+        other-extensions:
+          - GADTs
+    nummod-rank-n:
+        source-dirs: ch11/nummod-rank-n/
+        main: Main.hs
+        other-extensions:
+          - RankNTypes
